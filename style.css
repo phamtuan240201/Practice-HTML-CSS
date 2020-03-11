@@ -5,70 +5,95 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 body{
     font-family: 'Roboto', sans-serif;
-    font-weight: 500;
 }
 h1{
-    background: #ccc;
-    padding: 20px 0px;
     text-align: center;
+    background: #e3e3e3;
 }
-.row{
-    display: flex;
-    flex-wrap: wrap;
+.grid-container{
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-gap: 10px;
 }
-.sildebar{
-    /* width: 200px; */
-    flex: 11%;
-    text-align: center;
-    
+.silde{
+    width: 200px;
 }
 li{
-    background: #ccc;
-    margin: 5px 0px;
-}
-a{
-    display: inline-block;
-    padding: 10px 0px;
+    text-align: center;
+    margin: 10px 0px;
+    width: 100%;
+    background: #e3e3e3;
+    padding: 10px 0px ;
 }
 
-.main-content {
-    padding: 20px;
-    flex:58%;
-}
 .start-content{
-    display: flex;
-
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
 }
-.item-content{
-    flex: 25%;
-    margin: 0px 5px;
+.start-content h3{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 20px;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
 }
-.item-content > img{
+.item-content >img{
     width: 100%;
 }
-.about{
-    /* width: 200px; */
-    flex: 11%;
-    text-align: center;
-    background: #ccc;
-    margin: 5px 0px;
-}
 
+.about{
+    width: 200px;
+    text-align: center;
+    background: #e3e3e3;
+    margin-top: 10px;
+}
 footer{
-    background: #ccc;
+    background: #e3e3e3;
+    margin-top: 20px;
+}
+footer h2{
     text-align: center;
     padding: 20px 0px;
 }
-
+@media screen and (max-width : 1024px){
+    .start-content{
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media screen and (max-width : 1024px){
+    .start-content{
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+    }
+}
 @media screen and (max-width : 620px){
-    .row{
-        flex-direction: column;
+    .silde{
+        width: 100%;
     }
     .about{
-        padding: 20px 0px;
+        width: 100%;
     }
-    .about p{
-        margin-top: 20px;
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
     }
-
+    .start-content{
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width : 320px){
+    .start-content{
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: 1fr ;
+    }
 }
