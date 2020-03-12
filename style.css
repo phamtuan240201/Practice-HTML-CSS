@@ -99,9 +99,5 @@ footer h2{
         grid-template-columns: 1fr;
         grid-gap: 10px;
     }
-    .start-content{
-        margin-top: 10px;
-        display: grid;
-        grid-template-columns: 1fr;
-    }
+    
 }
